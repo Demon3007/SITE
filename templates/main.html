@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сайт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+            <form class="login-form" id="ok" action="/" method="post">
+                <input name="first_name" type="text" placeholder="Ім'я" required/>
+                <input name="last_name" type="text" placeholder="Прізвище" required/>
+                <p><b>Виберіть дату народження:</b> <input name="date" type="date"></p>
+                <input type="submit" class="button" value="Надіслати">
+                <input type="reset" class="button" value="Сбросити">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

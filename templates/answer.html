@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Сайт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/answer.css') }}">
+</head>
+
+<body>
+    <div class="table-title">
+        <h3>Data Table</h3>
+    </div>
+    <table class="table-fill">
+        <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">First Name</th>
+                <th class="text-center">Last Name</th>
+                <th class="text-center">Date</th>
+            </tr>
+        </thead>
+        <tbody class="table-hover">
+            {% for user in obj %}
+            <tr>
+                {% for info in user %}
+                <td class="text-left">{{info}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>
